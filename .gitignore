@@ -1,0 +1,16 @@
+# Documentation
+*.md
+
+# Frontend
+finance-system-frontend/node_modules/
+finance-system-frontend/.nuxt/
+finance-system-frontend/.output/
+
+# Backend
+finance-system-api/vendor/
+finance-system-api/.env
+finance-system-api/storage/logs/
+finance-system-api/storage/framework/cache/
+finance-system-api/storage/framework/sessions/
+finance-system-api/storage/framework/views/
+finance-system-api/bootstrap/cache/
