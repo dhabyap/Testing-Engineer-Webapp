@@ -1,5 +1,6 @@
-# Documentation
+# Documentation (exclude all .md except README.md)
 *.md
+!README.md
 
 # Frontend
 finance-system-frontend/node_modules/
