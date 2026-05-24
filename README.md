@@ -3,14 +3,14 @@
 Sistem manajemen keuangan sederhana dengan fitur Chart of Accounts (COA), transaksi, dan laporan Profit & Loss.
 
 ## 📋 Daftar Isi
-- [Teknologi](#teknologi)
-- [Struktur Project](#struktur-project)
-- [Instalasi](#instalasi)
-- [Konfigurasi](#konfigurasi)
-- [Menjalankan Aplikasi](#menjalankan-aplikasi)
-- [Fitur Utama](#fitur-utama)
-- [API Endpoints](#api-endpoints)
-- [Troubleshooting](#troubleshooting)
+- [Teknologi](#-teknologi)
+- [Struktur Project](#-struktur-project)
+- [Instalasi](#-instalasi)
+- [Konfigurasi](#%EF%B8%8F-konfigurasi)
+- [Menjalankan Aplikasi](#%EF%B8%8F-menjalankan-aplikasi)
+- [Fitur Utama](#-fitur-utama)
+- [API Endpoints](#-api-endpoints)
+- [Troubleshooting](#-troubleshooting)
 
 ---
 
@@ -405,25 +405,6 @@ Dokumentasi interaktif dibuat dengan Scribe, lengkap dengan:
 
 ---
 
-## 🤝 Kontribusi
-
-1. Fork repository
-2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
-3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Buat Pull Request
-
----
-
-## 📄 Lisensi
-
-Project ini dibuat untuk keperluan testing engineer.
-
----
-
-## 👨‍💻 Developer
-
-Dibuat dengan ❤️ untuk testing engineer assessment.
 
 **Tech Stack:**
 - Backend: Laravel 10 + MySQL
