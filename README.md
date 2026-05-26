@@ -19,8 +19,8 @@ Sistem manajemen keuangan sederhana dengan fitur Chart of Accounts (COA), transa
 ### Backend (API)
 - **Laravel 10** - PHP Framework
 - **MySQL** - Database
-- **Laravel Excel** - Export Excel
-- **Scribe** - API Documentation
+- **Laravel Excel** (`maatwebsite/excel`) - Export Excel
+- **Scribe** (`knuckleswtf/scribe ^5.10`) - API Documentation
 
 ### Frontend
 - **Nuxt 3** - Vue.js Framework
@@ -405,8 +405,110 @@ Dokumentasi interaktif dibuat dengan Scribe, lengkap dengan:
 
 ---
 
+## 📖 Dokumentasi Lengkap Proyek
+
+Proyek ini memiliki dokumentasi komprehensif yang dibagi menjadi beberapa file:
+
+### 1. **[PRD_Simple_Finance_System.md](PRD_Simple_Finance_System.md)** 📋
+**Product Requirement Document** - Spesifikasi lengkap sistem:
+- Overview & Objective
+- User Roles & Permissions
+- Database Architecture & Schema
+- Feature Requirements (CRUD + P&L Report + Export Excel)
+- Technical Specifications (Backend Laravel + Frontend Nuxt)
+- Nilai Tambah (Creative Features)
+- Timeline & Target Penyerahan (5 Hari)
+
+**Gunakan untuk:** Memahami requirement lengkap proyek, arsitektur database, dan scope pengerjaan.
+
+---
+
+### 2. **[IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md)** 📋
+**Step-by-Step Implementation Guide** - Panduan development detail:
+- **FASE 1-2 (Backend Setup & API):**
+  - Environment setup & project initialization
+  - Database migrations & schema
+  - Models & Relationships
+  - API Resources (untuk standardisasi response)
+  - Form Request Validation
+  - Controllers & CRUD Endpoints
+  - API Routes
+  - Profit & Loss Report Logic
+  - Database Seeding (Test Data)
+  - Laravel Scribe untuk API Documentation
+
+- **FASE 3-4 (Frontend Development):**
+  - Nuxt.js project setup
+  - API integration & Composables
+  - Page components (COA Categories, Chart of Accounts, Transactions, P&L Report)
+  - State management dengan Pinia
+  - Form handling & validation
+  - Data display dengan DataTables
+
+- **FASE 5 (Polish & Deployment):**
+  - Excel export implementation
+  - Bug fixes & testing
+  - Deployment checklist
+
+**Gunakan untuk:** Referensi step-by-step development, memahami setiap keputusan arsitektur, dan implementasi code.
+
+---
+
+### 3. **[ISSUE_SCRIBE_PERMISSION.md](ISSUE_SCRIBE_PERMISSION.md)** 🐛
+**Troubleshooting Guide - Laravel Scribe Permission Error** - Solusi untuk error permissions:
+- Root cause analysis
+- 5+ Solutions:
+  1. Clean Up & Run as Administrator (EASIEST)
+  2. Change Scribe Configuration
+  3. Use Static Type Instead
+  4. Manual Move Folder
+  5. Use Windows Subsystem for Linux (WSL2)
+- Prevention & Best Practices
+- Quick Fix Checklist
+- Advanced Debug Mode
+- Alternative Options
+
+**Gunakan untuk:** Mengatasi error permission saat generate API documentation dengan Scribe di Windows, atau referensi untuk troubleshooting serupa.
+
+---
+
+## 🏗️ Arsitektur Sistem
+
+### Database Schema (3 Tabel Utama):
+```
+coa_categories
+  ├── id (PK)
+  ├── name (Unique)
+  └── timestamps
+
+chart_of_accounts
+  ├── id (PK)
+  ├── code (Unique)
+  ├── name
+  ├── coa_category_id (FK → coa_categories)
+  └── timestamps
+
+transactions
+  ├── id (PK)
+  ├── date
+  ├── coa_id (FK → chart_of_accounts)
+  ├── description
+  ├── debit (Decimal)
+  ├── credit (Decimal)
+  └── timestamps
+```
+
+### API Layers:
+- **Models** - Data representation & relationships
+- **Form Requests** - Centralized validation
+- **Resources** - Standardized JSON responses
+- **Controllers** - Business logic & API endpoints
+- **Routes** - Endpoint definitions
+
+---
 
 **Tech Stack:**
 - Backend: Laravel 10 + MySQL
 - Frontend: Nuxt 3 + TypeScript
-- Export: Laravel Excel (PhpSpreadsheet)
+- Export: Laravel Excel (maatwebsite/excel)
+- Documentation: Scribe (knuckleswtf/scribe ^5.10)
